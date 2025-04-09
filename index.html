@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geovanne de Iemanjá</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-image: url('bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #5d2391, #9264c9);
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    section h2 {
+      background: linear-gradient(135deg, #5d2391, #9264c9);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    .services ul {
+      list-style-type: none;
+      padding-left: 1rem;
+    }
+
+    .services li {
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+
+    .services li::before {
+      content: '🔮';
+      margin-right: 0.5rem;
+    }
+
+    .whatsapp {
+      background: #25d366;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+      margin: 3rem 0;
+      border-radius: 12px;
+      font-size: 1.2rem;
+    }
+
+    .whatsapp a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .testimonials, .gallery {
+      background: #f1e6f8;
+      padding: 2rem;
+      border-radius: 14px;
+      margin-top: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      color: black;
+    }
+
+    .testimonials p {
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 12px;
+    }
+
+    .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 1001;
+    }
+
+    footer {
+      background: #4b0082;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/e130b18810.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Geovanne de Iemanjá</h1>
+    <p>Consultas e trabalhos espirituais para transformar sua vida</p>
+  </header>
+
+  <section>
+    <h2>Encontre sua paz e conquiste seus desejos</h2>
+    <p>
+      Com mais de 5 anos de experiência, Geovanne de Iemanjá oferece orientação espiritual com seriedade, amor e firmeza. Caminhos abertos, proteção e soluções para o amor e vida financeira.
+    </p>
+  </section>
+
+  <section class="services">
+    <h2>Especialidades espirituais</h2>
+    <ul>
+      <li>Trabalhos de amor e reconciliação</li>
+      <li>Limpeza e proteção espiritual</li>
+      <li>União de casais e abertura de caminhos</li>
+      <li>Cartas ciganas e revelações com Iemanjá</li>
+      <li>Encantamentos para prosperidade</li>
+    </ul>
+  </section>
+
+  <section class="whatsapp">
+    <p>Agende agora pelo WhatsApp:</p>
+    <a href="https://wa.me/5561981945686" target="_blank">(61) 9.8194-5686</a>
+  </section>
+
+  <section class="testimonials">
+    <h2>Depoimentos reais</h2>
+    <p>“Geovanne é maravilhosa, me ajudou a reconquistar minha autoestima e seguir em frente.”</p>
+    <p>“Não acreditei quando vi meu amor voltar. Gratidão eterna por tudo!”</p>
+    <p>“Meu negócio começou a prosperar depois da limpeza espiritual.”</p>
+    <p>“Geovanne acalmou meu coração. Senti uma paz que não sentia há anos.”</p>
+    <p>“O trabalho foi certeiro e honesto. Recomendo a todos que buscam ajuda verdadeira.”</p>
+  </section>
+
+  <section class="gallery">
+    <h2>Galeria dos trabalhos</h2>
+    <div class="gallery-grid">
+      <img src="giovanny (1).png" alt="Trabalho espiritual 1">
+      <img src="giovanny (2).png" alt="Trabalho espiritual 2">
+      <img src="giovanny (3).png" alt="Trabalho espiritual 3">
+      <img src="giovanny (4).png" alt="Trabalho espiritual 4">
+      <img src="giovanny (5).png" alt="Trabalho espiritual 5">
+      <img src="giovanny (6).png" alt="Trabalho espiritual 6">
+      <img src="giovanny (7).png" alt="Trabalho espiritual 7">
+      <img src="giovanny (8).png" alt="Trabalho espiritual 8">
+      <img src="giovanny (9).png" alt="Trabalho espiritual 9">
+      <img src="giovanny (10).png" alt="Trabalho espiritual 10">
+      <img src="giovanny (11).png" alt="Trabalho espiritual 11">
+      <img src="giovanny (12).png" alt="Trabalho espiritual 12">
+      <img src="giovanny (13).png" alt="Trabalho espiritual 13">
+      <img src="giovanny (14).png" alt="Trabalho espiritual 14">
+      <img src="giovanny (15).png" alt="Trabalho espiritual 15">
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Imagem ampliada" id="lightbox-img">
+  </div>
+
+  <a class="whatsapp-fixed" href="https://wa.me/5585992449386" target="_blank" title="Fale conosco pelo WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <footer>
+    <p>© 2025 Geovanne de Iemanjá – Trabalhos espirituais com fé e respeito</p>
+  </footer>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    document.querySelectorAll('.gallery-grid img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
